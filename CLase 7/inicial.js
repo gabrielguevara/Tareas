@@ -22,12 +22,12 @@ ctx.moveTo(50, 300);
 ctx.lineTo(100, 400);
 ctx.lineTo(150, 300);
 ctx.stroke();
+ctx.fill();
 
 // Arco de circunferencia
 ctx.fillStyle = "red";
 ctx.beginPath();
 ctx.arc(100, 100, 50, 0, Math.PI, true);
-ctx.arc()
 ctx.moveTo(50, 100);
 ctx.lineTo(50, 100);
 ctx.stroke();
