@@ -27,6 +27,7 @@ ctx.stroke();
 ctx.fillStyle = "red";
 ctx.beginPath();
 ctx.arc(100, 100, 50, 0, Math.PI, true);
+ctx.arc()
 ctx.moveTo(50, 100);
 ctx.lineTo(50, 100);
 ctx.stroke();
