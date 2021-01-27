@@ -50,8 +50,8 @@ run()
 function crearParticula(gabriel){
     let nuevoBalon = Object.create(Balon)
     //asignar x, y, vX y vY
-    nuevoBalon.x = (gabriel.offsetX, gabriel.offsetY)
-    nuevoBalon.y = (gabriel.offsetX, gabriel.offsetY)
+    nuevoBalon.x = gabriel.offsetX
+    nuevoBalon.y = gabriel.offsetY
     // Genero el angulo de manera aleatoria
     // Math.random genera un numero aleatorio entre 0 y 1
     let ang = 2 * Math.PI * Math.random()
@@ -61,7 +61,8 @@ function crearParticula(gabriel){
 
     // añado el nuevo balón al array de balones
     balones.push(nuevoBalon)
-    console.log(balones)
+    console.log(gabriel.offsetX,gabriel.offsetY)
+
 }
 
 // Al hacer click se va a ejecutar la función crear partícula
