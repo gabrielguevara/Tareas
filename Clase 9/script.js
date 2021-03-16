@@ -17,23 +17,7 @@ function rectangulo(x, y, w, h) {
 // event listener
 // Event listener para cuando se haga click en el canvas
 // el evento se puede pasar como un argumento a la función que se ejecuta al hacer click
-canvas.onclick = function (evento) {
-  ctx.fillStyle = "rgba(255,100,100,0.7)";
-  circulo(evento.offsetX - 10, evento.offsetY, 15);
-  circulo(evento.offsetX + 10, evento.offsetY, 15);
-  circulo(evento.offsetX, evento.offsetY - 10, 15);
-  circulo(evento.offsetX, evento.offsetY + 10, 15);
-  ctx.fillStyle = "yellow";
-  circulo(evento.offsetX, evento.offsetY, 8);
 
-  //   console.log(evento);
-  //   console.log(
-  //     `Se hizo click en el canvas en las coordenadas ${evento.clientX}, ${evento.clientY} con respecto a la esquina superior izquierda de la pagina`
-  //   );
-  //   console.log(
-  //     `Se hizo click en el canvas en las coordenadas ${evento.offsetX}, ${evento.offsetY} con respecto a la esquina superior izquierda del canvas`
-  //   );
-};
 
 // Para borrar todo:
 function clear() {
@@ -41,31 +25,23 @@ function clear() {
 }
 // eventos al presionar una tecla
 // al inicio creo un circulo en el centro
-let x = 200;
-let y = 200;
+let x = 350;
+let y = 350;
 let puntaje = 0;
 ctx.fillStyle = "blue";
-circulo(x, y, 15);
+//circulo(x, y, 25);
+rectangulo(x, y, 100,20)
 document.onkeydown = function (evento) {
-  if (evento.key == "w") {
-    clear();
-    y = y - 10;
-    circulo(x, y, 15);
-  }
-  if (evento.key == "s") {
-    clear();
-    y = y + 10;
-    circulo(x, y, 15);
-  }
+  
   if (evento.key == "d") {
     clear();
     x = x + 10;
-    circulo(x, y, 15);
+    rectangulo(x, y, 100,20);
   }
   if (evento.key == "a") {
     clear();
     x = x - 10;
-    circulo(x, y, 15);
+    rectangulo(x, y, 100,20);
   }
   if ((y < 15 && y > 0) || (y > 385 && y < 400) || (x < 15 && x > 0) || (x > 385 && y < 400)) {
     puntaje += 1;
